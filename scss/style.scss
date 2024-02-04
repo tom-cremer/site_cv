@@ -1,19 +1,48 @@
+@import "variables";
+@import "font";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// Name + Toggle switch
 .name {
   display: flex;
 
+  text-decoration: none;
+  color: $Black;
+
+    span {
+      font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
+      font-weight: Bold;
+      font-size: 16px;
+    }
 
   svg {
     margin-left: 15px;
+    stroke: $Black;
+    circle {
+      fill: $Black;
+    }
   }
 }
 
+// Upper Banner
+
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding: 20px 10px;
 
-  a {
-    margin-left: 7em;
 
+  .mail {
+    text-decoration: none;
+    color: $Black;
+
+    font-family: "Proxima-Nova", Helvetica, Arial, sans-serif;
+    font-weight: Bold;
+    font-size: 16px;
   }
 }
 
