@@ -5,12 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cremer Tom</title>
-  <link rel="stylesheet" href="scss/reset.scss">
+  <!--<link rel="stylesheet" href="scss/reset.scss"> -->
+  <link rel="stylesheet" href="scss/font.scss">
   <link rel="stylesheet" href="scss/style.scss">
 
 
   <meta name="author" content="Tom Cremer">
-  <meta name="description" content="Présentation de notre cv sous forme de site dans le cadre de notre cours de design web ">
+  <meta name="description"
+        content="Présentation de notre cv sous forme de site dans le cadre de notre cours de design web ">
   <meta name="keyword" content="Cv, curriculum vitae, designer, developer web, student, design web, web">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -24,14 +26,142 @@
 <body>
   <h1 class="hidden">Cremer Tom</h1>
 
-  <section>
-    <a href="#">Tom Cremer</a>
+  <nav class="event-menu hidden">
+    <a class="name" href="#">
+      <span>Tom Cremer</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+           fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round" class="feather feather-toggle-left">
 
-  </section>
+        <rect x="1" y="5" width="22" height="12" rx="6" ry="6"></rect>
+        <circle fill="black" cx="7" cy="11" r="2"></circle>
+      </svg>
+    </a>
+
+    <ul class="menu">
+      <li><a href="#About">About</a></li>
+      <li><a href="#Resume">Resume</a></li>
+      <li><a href="#Projects">Projects</a></li>
+      <li><a href="#Skills">Skills</a></li>
+      <li><a href="#News">News</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <a class="name" href="#">
+      <span>Tom Cremer</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+           fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round" class="feather feather-toggle-left">
+
+        <rect x="1" y="5" width="22" height="12" rx="6" ry="6"></rect>
+        <circle fill="black" cx="7" cy="11" r="2"></circle>
+      </svg>
+    </a>
+    <a class="mail" href="mailto:tom.cremer@student.hepl.be">tom.cremer@student.hepl.be</a>
+  </header>
 
 
 
-  <script src="js/app.js"></script>
+
+<!-- side menu -->
+  <div class="side-menu">
+    <a class="name" href="#">
+      <span>Tom Cremer</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+           fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round" class="feather feather-toggle-left">
+
+        <rect x="1" y="5" width="22" height="12" rx="6" ry="6"></rect>
+        <circle fill="black" cx="7" cy="11" r="2"></circle>
+      </svg>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a>
+          <ul class="sub-menu">
+            <li><a href="#"></a></li>
+            <li><a href="#">Main</a></li>
+            <li><a href="#">Left Menu</a></li>
+            <li><a href="#">Splitscreen</a></li>
+            <li><a href="#">Photographer</a></li>
+            <li><a href="#">Blogger</a></li>
+          </ul>
+        </li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Pages</a>
+          <ul class="sub-menu">
+            <li><a href="#"></a></li>
+            <li><a href="#">404 Page</a></li>
+            <li><a href="#">Coming Soon</a></li>
+            <li><a href="#">Services</a>
+              <ul class="resub-menu">
+                <li><a href="#"></a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Services 2</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Team</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Blog</a>
+          <ul class="sub-menu">
+            <li><a href="#"></a></li>
+            <li><a href="#">Carrousel</a></li>
+            <li><a href="#">Grid</a></li>
+            <li><a href="#">Grid with SideBar</a></li>
+            <li><a href="#">Packery</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Gallery</a>
+          <ul class="sub-menu">
+            <li><a href="#"></a></li>
+            <li><a href="#">Carrousel</a></li>
+            <li><a href="#">Grid</a></li>
+            <li><a href="#">Masonry</a></li>
+            <li><a href="#">Packery</a></li>
+            <li><a href="#">Slider</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact Me</a>
+          <ul class="sub-menu">
+            <li><a href="#"></a></li>
+            <li><a href="#">Contact Me</a></li>
+            <li><a href="#">Contact Me 2</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="bottom">
+      <div class="social-links-side">
+        <ul>
+          <li><a href="#">F</a></li>
+          <li><a href="#">B</a></li>
+          <li><a href="#">I</a></li>
+        </ul>
+      </div>
+      <a class="mail" href="mailto:tom.cremer@student.hepl.be">tom.cremer@student.hepl.be</a>
+      <p class="copyright">&copy; 2024 CV, Cremer Tom.</p>
+    </div>
+  </div>
+
+  <div class="social-links-left">
+    <ul>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Behance</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+  </div>
+
+
+
+
+
+
+<script src="js/app.js"></script>
 </body>
 
 </html>
