@@ -24,6 +24,12 @@ body {
     stroke: $Black;
     circle {
       fill: $Black;
+      transition: 0.5s;
+    }
+  }
+  svg:hover {
+    circle{
+      transform: translateX(2px);
     }
   }
 }
