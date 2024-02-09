@@ -1,0 +1,8 @@
+@import "variables";
+
+// Font Import
+
+@font-face {
+  font-family: 'Satoshi', sans-serif;
+  src: url('#{$path-satoshi}');
+}
