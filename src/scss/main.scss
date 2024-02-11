@@ -8,36 +8,56 @@ body {
 
 .header-container {
   background-color: $black;
-  padding: 33px 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding: 33px 50px;
+
   .title-container {
     display: flex;
     align-items: center;
+
     .logo {
       order: -1;
       margin-right: 7px;
     }
+
     .title-content {
       text-decoration: none;
       color: inherit;
-      font-family: 'Satoshi', Montserrat, Helvetica, Arial, sans-serif;
+      font-family: $satoshi;
       font-size: 25px;
       font-weight: bold;
     }
   }
+
   .menu-container {
-    float: right;
-    position: relative;
-  }
-  .menu-list {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
-  }
+    .menu-list {
+      padding: 0;
+      .menu-item {
+        display: inline;
+        margin-right: 40px;
+        &:last-child {
+          margin-right: auto;
+        }
 
+        .menu-links {
+          text-decoration: none;
+          color: inherit;
+          font-family: $satoshi;
+          font-size: 18px;
+          font-weight: 500;
+        }
+        .header-button {
+          font-weight: bold;
+          padding: 15px 16px;
+          border: 2px $white solid;
+          border-radius: 9px;
+        }
+
+      }
+    }
+  }
 }
-
 
 .hidden {
   clip: rect(0 0 0 0);
