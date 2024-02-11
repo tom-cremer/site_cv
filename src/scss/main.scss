@@ -2,7 +2,41 @@
 @import "font";
 @import "reset";
 
+body {
+  color: $white;
+}
 
+.header-container {
+  background-color: $black;
+  padding: 33px 0;
+  display: flex;
+  justify-content: space-evenly;
+  .title-container {
+    display: flex;
+    align-items: center;
+    .logo {
+      order: -1;
+      margin-right: 7px;
+    }
+    .title-content {
+      text-decoration: none;
+      color: inherit;
+      font-family: 'Satoshi', Montserrat, Helvetica, Arial, sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+  .menu-container {
+    float: right;
+    position: relative;
+  }
+  .menu-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+  }
+
+}
 
 
 .hidden {
@@ -13,4 +47,17 @@
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.cls-1 {
+  fill: none;
+  stroke-miterlimit: 10;
+}
+
+.cls-1, .cls-2 {
+  stroke: #fff;
+}
+
+.cls-2 {
+  fill: #fff;
 }
