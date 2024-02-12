@@ -11,8 +11,8 @@ body {
 .header-container {
   background-color: $black;
   display: flex;
-  justify-content: space-around;
-  padding: 33px 50px;
+  justify-content: space-between;
+  padding: 33px 100px;
 
   .title-container {
     display: flex;
