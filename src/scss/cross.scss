@@ -42,3 +42,12 @@
   display: none;
   transition:3s ease-in-out;
 }
+
+.banner-container {
+  .cross[type="checkbox"]:checked + .cross-button + #content,
+  .cross[type="checkbox"]:checked + .cross-button{
+    display: none;
+    transition:3s ease-in-out;
+
+  }
+}

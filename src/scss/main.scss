@@ -69,17 +69,21 @@ body {
 
 .banner-container {
   background-color: $green;
-  padding: 15px 105px;
   .cross-container {
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: row;
+
+    .cross-button {
+      margin: 0 105px 0 0;
+    }
 
     #content {
       font-family: $satoshi;
       font-size: 20px;
       font-weight: 600;
-
+      margin: 15px 0px 15px 105px;
+      order: -1;
       .banner-github {
         text-decoration: none;
         color: inherit;
