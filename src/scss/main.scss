@@ -31,13 +31,19 @@ body {
   }
 
   .menu-container {
+    width: 40%;
+
     .menu-list {
-      padding: 0;
+      display: flex;
+      justify-content: space-between;
+
       .menu-item {
-        display: inline;
-        margin-right: 40px;
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-left: 4%;
+        }
         &:last-child {
-          margin-right: auto;
+          margin-left: 10%;
         }
 
         .menu-links {
@@ -80,4 +86,11 @@ body {
 
 .cls-2 {
   fill: #fff;
+}
+
+
+@media screen and (min-width: 1500px) {
+  .menu-container {
+    width: 50%;
+  }
 }
