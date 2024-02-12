@@ -1,6 +1,8 @@
+@import "reset";
 @import "variables";
 @import "font";
-@import "reset";
+@import "cross";
+
 
 body {
   color: $white;
@@ -65,6 +67,22 @@ body {
   }
 }
 
+.banner-container {
+  background-color: $green;
+  padding: 17px 100px;
+  .cross-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+}
+
+#content {
+  display: inline-block;
+}
+
+
 .hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -75,22 +93,20 @@ body {
   width: 1px;
 }
 
+// style du logo T
 .cls-1 {
   fill: none;
   stroke-miterlimit: 10;
 }
-
 .cls-1, .cls-2 {
   stroke: #fff;
 }
-
 .cls-2 {
   fill: #fff;
 }
 
 
-@media screen and (min-width: 1500px) {
-  .menu-container {
-    width: 50%;
-  }
+// affichage burger menu et vertical
+@media screen and (min-width: 1020px) {
+
 }
