@@ -2,11 +2,11 @@
 
 .cross-button {
   cursor: pointer;
-
   display: inline-block;
   position: relative;
   width: 20px;
   aspect-ratio: 1;
+
 }
 
 .cross-button:hover .line {
@@ -40,14 +40,6 @@
 .cross[type="checkbox"]:checked + .cross-button + #content,
 .cross[type="checkbox"]:checked + .cross-button{
   display: none;
-  transition:3s ease-in-out;
 }
 
-.banner-container {
-  .cross[type="checkbox"]:checked + .cross-button + #content,
-  .cross[type="checkbox"]:checked + .cross-button{
-    display: none;
-    transition:3s ease-in-out;
 
-  }
-}

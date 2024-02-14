@@ -6,6 +6,7 @@
 
 body {
   color: $white;
+  font-family: $satoshi;
 }
 
 .header-container {
@@ -26,7 +27,6 @@ body {
     .title-content {
       text-decoration: none;
       color: inherit;
-      font-family: $satoshi;
       font-size: 25px;
       font-weight: bold;
     }
@@ -51,14 +51,14 @@ body {
         .menu-links {
           text-decoration: none;
           color: inherit;
-          font-family: $satoshi;
           font-size: 18px;
           font-weight: 500;
         }
         .header-button {
           font-weight: bold;
-          padding: 15px 16px;
-          border: 2px $white solid;
+          font-size: 16px;
+          padding: 13px 16px;
+          border: 1px $white solid;
           border-radius: 9px;
         }
 
@@ -72,25 +72,75 @@ body {
   .cross-container {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
 
     .cross-button {
       margin: 0 105px 0 0;
     }
 
     #content {
-      font-family: $satoshi;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
-      margin: 15px 0px 15px 105px;
+      margin: 15px 0 15px 105px;
       order: -1;
       .banner-github {
         text-decoration: none;
         color: inherit;
-        font-weight: bolder;
+        font-size: 20px;
+        font-weight: bold;
       }
 
     }
+  }
+}
+
+.main-container {
+  background-color: $black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .main-title {
+    text-align: center;
+    font-size: 72px;
+    line-height: 110%;
+    font-weight: 700;
+    margin-top: 96px;
+    margin-bottom: 30px;
+  }
+  .sub-title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 150%;
+    color: $dark-grey;
+    margin-bottom: 55px;
+  }
+  .main-content {
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    color: $dark-grey;
+    .emphasise {
+      color: $light-grey;
+      font-weight: 600;
+    }
+  }
+
+  .main-button {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 13px 72px;
+    border-radius: 5px;
+    background-color: $blue;
+    color: $white;
+    margin-bottom: 30px;
+  }
+
+  .main-image {
+    width: 200px;
+    min-height: 400px;
+    rotate: 67deg;
   }
 }
 
