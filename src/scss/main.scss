@@ -51,7 +51,6 @@ body {
         .menu-links {
           text-decoration: none;
           color: inherit;
-          font-size: 18px;
           font-weight: 500;
         }
         .header-button {
@@ -117,7 +116,7 @@ body {
   .main-content {
     font-size: 18px;
     line-height: 150%;
-    font-weight: lighter;
+    font-weight: 400;
     margin-bottom: 20px;
     color: $dark-grey;
     .emphasise {
