@@ -13,7 +13,7 @@ body {
   background-color: $black;
   display: flex;
   justify-content: space-between;
-  padding: 33px 100px;
+  padding: 33px 15%;
 
   .title-container {
     display: flex;
@@ -33,7 +33,7 @@ body {
   }
 
   .menu-container {
-    width: 40%;
+    width: 45%;
 
     .menu-list {
       display: flex;
@@ -42,10 +42,10 @@ body {
       .menu-item {
         &:nth-child(2),
         &:nth-child(3) {
-          margin-left: 4%;
+          margin-left: 5%;
         }
         &:last-child {
-          margin-left: 10%;
+          margin-left: 20%;
         }
 
         .menu-links {
@@ -56,9 +56,10 @@ body {
         .header-button {
           font-weight: bold;
           font-size: 16px;
-          padding: 13px 16px;
+          padding: 14px 30px;
           border: 1px $white solid;
-          border-radius: 9px;
+          border-radius: 50px;
+
         }
 
       }
@@ -73,13 +74,13 @@ body {
     justify-content: space-between;
 
     .cross-button {
-      margin: 0 105px 0 0;
+      margin: 0 15% 0 0;
     }
 
     #content {
       font-size: 18px;
       font-weight: 600;
-      margin: 15px 0 15px 105px;
+      margin: 15px 0 15px 15%;
       order: -1;
       .banner-github {
         text-decoration: none;
@@ -126,14 +127,14 @@ body {
   }
 
   .main-button {
+    display: inline-block;
     text-decoration: none;
     font-weight: 600;
     font-size: 20px;
-    padding: 13px 72px;
-    border-radius: 5px;
+    padding: 24px 116px;
+    border-radius: 50px;
     background-color: $blue;
     color: $white;
-    margin-bottom: 30px;
   }
 
   .main-image {
@@ -143,6 +144,53 @@ body {
   }
 }
 
+
+.main-button-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  & li:last-child .main-button {
+    background-color: $white;
+    color: $blue;
+    padding: 24px 38px;
+  }
+}
+
+
+
+.skills-container {
+  background-color: $black;
+  .skills-title {
+    margin-top: 0;
+    margin-bottom: 21px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 120%;
+
+  }
+  .skills-list {
+    display: flex;
+    gap: 38px;
+
+
+    .skills-item {
+      width: 97px;
+      aspect-ratio: 1;
+      display: flex;
+      justify-content: center;
+      background-color: $dark-blue;
+      border-radius: 7px;
+    }
+    .skills-item:last-child {
+      background-color: $grey;
+    }
+  }
+}
+
+.skills-image {
+  width: 40px;
+  aspect-ratio: 1;
+}
 
 
 .hidden {
