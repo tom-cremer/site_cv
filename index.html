@@ -51,7 +51,7 @@
 
 <div class="banner-container">
   <div class="cross-container">
-    <input type="checkbox" id="cross" class="cross" autocomplete="off">
+    <input type="checkbox" id="cross" class="cross hidden" autocomplete="off">
     <label for="cross" class="cross-button">
       <span class="line"></span>
       <span class="line"></span>
@@ -64,8 +64,8 @@
   <h2 class="main-title">Vers L'infini et Au-Delà</h2>
   <p class="sub-title">Défier les Limites est Devenu une Passion</p>
   <ul class="main-button-container">
-    <li><a href="#" class="main-button">Contact Me</a></li>
-    <li><a href="#" class="main-button">Contact Me</a></li>
+    <li><a href="#" class="main-button">Contactez-Moi</a></li>
+    <li><a href="#" class="main-button">Mon Portfolio</a></li>
   </ul>
   <img class="main-image" src="img/illustrations/3d-business-rocket.png" alt="Image d'une fusée 3D rouge et blanche, style cartoon">
 </section>
@@ -85,7 +85,13 @@
 </section>
 
 
-<script src="src/js/app.js"></script>
+<div class="progress-container">
+  <h2 class="hidden">Scroll Indicator</h2>
+  <div class="progress-wrapper">
+    <div class="progress-bar" id="Bar"></div>
+  </div>
+</div>
+<script src="./src/js/app.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,22 @@
+@import "variables";
+
+.progress-container {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: $dark-blue;
+}
+
+.progress-wrapper {
+  width: 100%;
+  min-height: 4px;
+  background: $dark-blue;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  min-height: 4px;
+  background: $blue;
+  width: 0%;
+}
