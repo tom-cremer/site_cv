@@ -32,10 +32,6 @@
   transform: translateY(-50%) rotate(-45deg);
 }
 
-.cross[type="checkbox"] {
-  display: none;
-}
-
 // when checked it displayed none
 .cross[type="checkbox"]:checked + .cross-button + #content,
 .cross[type="checkbox"]:checked + .cross-button{
