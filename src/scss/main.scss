@@ -13,7 +13,7 @@ body {
   background-color: $black;
   display: flex;
   justify-content: space-between;
-  padding: 33px 15%;
+  padding: 33px 10%;
 
   .title-container {
     display: flex;
@@ -42,10 +42,11 @@ body {
       .menu-item {
         &:nth-child(2),
         &:nth-child(3) {
-          margin-left: 5%;
+          margin-left: 10%;
         }
+
         &:last-child {
-          margin-left: 20%;
+          margin-left: 30%;
         }
 
         .menu-links {
@@ -53,6 +54,7 @@ body {
           color: inherit;
           font-weight: 500;
         }
+
         .header-button {
           font-weight: bold;
           font-size: 16px;
@@ -69,19 +71,21 @@ body {
 
 .banner-container {
   background-color: $green;
+
   .cross-container {
     display: flex;
     justify-content: space-between;
 
     .cross-button {
-      margin: 0 15% 0 0;
+      margin: 0 5% 0 0;
     }
 
     #content {
       font-size: 18px;
       font-weight: 600;
-      margin: 15px 0 15px 15%;
+      margin: 15px 0 15px 10%;
       order: -1;
+
       .banner-github {
         text-decoration: none;
         color: inherit;
@@ -107,6 +111,7 @@ body {
     margin-top: 96px;
     margin-bottom: 30px;
   }
+
   .sub-title {
     font-size: 28px;
     font-weight: 500;
@@ -114,15 +119,30 @@ body {
     color: $dark-grey;
     margin-bottom: 55px;
   }
+
   .main-content {
     font-size: 18px;
     line-height: 150%;
     font-weight: 400;
     margin-bottom: 20px;
     color: $dark-grey;
+
     .emphasise {
       color: $light-grey;
       font-weight: 600;
+    }
+  }
+
+  .main-button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    & li:last-child .main-button {
+      background-color: $white;
+      font-weight: 500;
+      color: $blue;
+      padding: 24px 38px;
     }
   }
 
@@ -145,42 +165,35 @@ body {
 }
 
 
-.main-button-container {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 30px;
-  & li:last-child .main-button {
-    background-color: $white;
-    color: $blue;
-    padding: 24px 38px;
-  }
-}
-
-
-
 .skills-container {
   background-color: $black;
+  padding: 96px 210px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 100px;
+  border-top: 1px $grey solid;
+
   .skills-title {
     margin-top: 0;
-    margin-bottom: 21px;
-    font-size: 48px;
-    font-weight: 700;
+    margin-bottom: 35px;
+    font-size: 42px;
+    font-weight: 600;
     line-height: 120%;
-
   }
+
   .skills-list {
     display: flex;
     gap: 38px;
 
-
     .skills-item {
-      width: 97px;
+      width: 80px;
       aspect-ratio: 1;
       display: flex;
       justify-content: center;
-      background-color: $dark-blue;
+      background-color: $item-blue;
       border-radius: 7px;
     }
+
     .skills-item:last-child {
       background-color: $grey;
     }
@@ -190,6 +203,19 @@ body {
 .skills-image {
   width: 40px;
   aspect-ratio: 1;
+}
+
+.article-item {
+  &:first-child,
+  &:nth-child(2) {
+    margin-bottom: 35px;
+  }
+}
+
+.article-content {
+  font-size: 20px;
+  color: $dark-grey;
+
 }
 
 
@@ -208,9 +234,11 @@ body {
   fill: none;
   stroke-miterlimit: 10;
 }
+
 .cls-1, .cls-2 {
   stroke: #fff;
 }
+
 .cls-2 {
   fill: #fff;
 }
