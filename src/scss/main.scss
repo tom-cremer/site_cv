@@ -127,10 +127,6 @@ body {
     margin-bottom: 20px;
     color: $dark-grey;
 
-    .emphasise {
-      color: $light-grey;
-      font-weight: 600;
-    }
   }
 
   .main-button-container {
@@ -167,23 +163,28 @@ body {
 
 .skills-container {
   background-color: $black;
-  padding: 96px 210px;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 100px;
+  grid-template-columns: repeat(2, minmax(25em, 31.25em));
+  column-gap: 7.5em;
   border-top: 1px $grey solid;
 
   .skills-title {
     margin-top: 0;
     margin-bottom: 35px;
     font-size: 42px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 120%;
   }
 
   .skills-list {
-    display: flex;
-    gap: 38px;
+    display: grid;
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
     .skills-item {
       width: 80px;
@@ -205,6 +206,7 @@ body {
   aspect-ratio: 1;
 }
 
+
 .article-item {
   &:first-child,
   &:nth-child(2) {
@@ -216,6 +218,79 @@ body {
   font-size: 20px;
   color: $dark-grey;
 
+}
+
+.contact-container {
+  background-color: $item-blue;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, minmax(25em, 31.25em)); //400px , 500px
+  padding-top: 3.5em; //56px
+  padding-bottom: 3.5em; //56px
+
+  .contact-title {
+    margin-top: 0;
+    font-size: 2.625em; //42px
+    margin-bottom: 1.380952381em; //58px
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  .contact-details {
+    margin-top: 0;
+    font-size: 0.5625em; //9px
+    font-weight: 500;
+    line-height: 10px;
+    color: $grey;
+
+    .contact-emphasize {
+      font-weight: bold;
+      line-height: 10px;
+      color: $white;
+    }
+
+  }
+
+  .contact-form {
+    margin-top: 12px;
+    margin-bottom: 15px;
+
+    .c-input {
+      width: 55%;
+      padding: 15px 20px;
+      background-color: $dark-blue;
+      border: 1px $light-grey solid;
+      border-radius: 5px;
+      margin-right: 1%;
+
+      &::placeholder {
+        font-family: $satoshi;
+        font-weight: bold;
+        color: $white;
+      }
+
+      &:focus {
+        border: 1px $blue solid;
+        caret-color: $white;
+        outline: 0;
+      }
+    }
+
+    .c-submit {
+      text-decoration: none;
+      width: 34%;
+      padding-top: 12px;
+      padding-bottom: 13px;
+      font-family: $satoshi;
+      font-size: 17px;
+      font-weight: 500;
+      border-radius: 50px;
+      line-height: 120%;
+      border: none;
+      background-color: $blue;
+      color: $white;
+    }
+  }
 }
 
 
@@ -245,6 +320,6 @@ body {
 
 
 // affichage burger menu et vertical
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 990px) {
 
 }
