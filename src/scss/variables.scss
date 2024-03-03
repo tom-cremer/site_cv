@@ -22,3 +22,20 @@ $satoshi: 'Satoshi', Montserrat, Helvetica, Arial, sans-serif;
 // Font Path
 
 $path-satoshi: "../../font/Satoshi/Satoshi-Variable.ttf";
+
+
+//
+
+@mixin title {
+  text-align: center;
+  font-size: 4.5em;
+  line-height: 110%;
+  font-weight: 700;
+}
+
+@mixin subtitle {
+  font-size: 1.75em;
+  font-weight: 500;
+  line-height: 150%;
+  color: $dark-grey;
+}
