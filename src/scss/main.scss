@@ -13,7 +13,8 @@ body {
   background-color: $black;
   display: flex;
   justify-content: space-between;
-  padding: 33px 10%;
+  align-items: center;
+  padding: 33px 7%;
 
   .title-container {
     display: flex;
@@ -33,20 +34,19 @@ body {
   }
 
   .menu-container {
-    width: 45%;
 
     .menu-list {
       display: flex;
-      justify-content: space-between;
+
 
       .menu-item {
         &:nth-child(2),
         &:nth-child(3) {
-          margin-left: 10%;
+          margin-left: 3em;
         }
 
         &:last-child {
-          margin-left: 30%;
+          margin-left: 6.5em;
         }
 
         .menu-links {
@@ -86,13 +86,13 @@ body {
     justify-content: space-between;
 
     .cross-button {
-      margin: 0 5% 0 0;
+      margin: 0 7% 0 0;
     }
 
     #content {
       font-size: 18px;
       font-weight: 600;
-      margin: 15px 0 15px 10%;
+      margin: 15px 0 15px 8%;
       order: -1;
 
       .banner-github {
@@ -232,9 +232,7 @@ body {
 }
 
 .article-content {
-  font-size: 1.25em;
-  line-height: 120%;
-  color: $dark-grey;
+ @include text;
 
 }
 
@@ -324,15 +322,53 @@ body {
 
   .h-title {
     @include title;
-    margin-top: 96px;
-    margin-bottom: 32px;
+    margin-top: 1.2em; //96 % 72 = 1,333333333333333
+    margin-bottom: 0.3888888888888889em; //28px
   }
   .h-subtitle {
     @include subtitle;
+    font-size: 1.2727272727em; //22px
+    text-align: center;
+    max-width: 800px;
+    & span {
+      color: $white;
+      font-weight: 600;
+    }
   }
   .h-img {
     width: 900px;
   }
+}
+
+.project-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-auto-flow: column;
+  background-color: $black;
+  & img {
+    margin: auto;
+  }
+}
+
+.p-content {
+  text-align: center;
+  padding: 48px;
+  background-color: #111523;
+}
+
+.p-1 {
+  & .tag {
+    @include project;
+  }
+  & .p-title {
+    @include project-title;
+  }
+  .i-text {
+    @include text;
+  }
+
 }
 
 

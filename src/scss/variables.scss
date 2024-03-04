@@ -28,14 +28,33 @@ $path-satoshi: "../../font/Satoshi/Satoshi-Variable.ttf";
 
 @mixin title {
   text-align: center;
-  font-size: 4.5em;
+  font-size: 4.5em; //72px
   line-height: 110%;
   font-weight: 700;
 }
 
 @mixin subtitle {
-  font-size: 1.75em;
+  font-size: 1.75em; //28px
   font-weight: 500;
   line-height: 150%;
+  color: $dark-grey;
+}
+
+@mixin project {
+  color: $blue;
+  font-size: 1.125em;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+@mixin project-title {
+  font-size: 3em; //48px
+  font-weight: bold;
+  line-height: 120%;
+}
+
+@mixin text {
+  font-size: 1.25em;
+  line-height: 120%;
   color: $dark-grey;
 }
