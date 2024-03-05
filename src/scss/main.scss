@@ -232,7 +232,7 @@ body {
 }
 
 .article-content {
- @include text;
+  @include text;
 
 }
 
@@ -325,16 +325,19 @@ body {
     margin-top: 1.2em; //96 % 72 = 1,333333333333333
     margin-bottom: 0.3888888888888889em; //28px
   }
+
   .h-subtitle {
     @include subtitle;
     font-size: 1.2727272727em; //22px
     text-align: center;
     max-width: 800px;
+
     & span {
       color: $white;
       font-weight: 600;
     }
   }
+
   .h-img {
     width: 900px;
   }
@@ -343,17 +346,25 @@ body {
 .project-container {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, minmax(400px,1fr));
+  grid-template-rows: repeat(4, 100vh);
   grid-auto-flow: column;
   background-color: $black;
+
   & img {
     margin: auto;
   }
+  .mockup {
+    width: 100%;
+  }
+
 }
 
 .p-content {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 48px;
   background-color: #111523;
 }
@@ -362,12 +373,64 @@ body {
   & .tag {
     @include project;
   }
+
   & .p-title {
     @include project-title;
+    margin-top: 24px;
+    margin-bottom: 20px;
   }
-  .i-text {
-    @include text;
+
+  // Text List
+  .text-list {
+    display: flex;
+    flex-direction: column;
+    .i-text {
+      @include text;
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
   }
+
+  // Technologies list
+  .p-list {
+    display: grid;
+    column-gap: 24px;
+    grid-template-columns: repeat(4, minmax(100px, 140px));
+    grid-template-rows: auto 1fr;
+
+    .p-sub {
+      grid-area: 1 / 1 / 2 / 5;
+    }
+    .p-subtitle {
+      text-align: center;
+      color: $white;
+      font-size: 1.125em; //18px
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .p-item-text {
+      @include p-item-text;
+    }
+
+
+  }
+
+  .p-item div {
+    width: 80px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    background-color: $dark-blue;
+    border-radius: 7px;
+    margin: auto;
+  }
+
+  .p-image {
+    width: 50px;
+    aspect-ratio: 1;
+  }
+
 
 }
 
