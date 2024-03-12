@@ -430,7 +430,41 @@ body {
     width: 50px;
     aspect-ratio: 1;
   }
+}
 
+.curriculum-container {
+  background-color: $black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(25em, 31.25em)); //400px , 500px
+  padding-top: 7.5em; //120px
+  padding-bottom: 7.5em; //120px
+  column-gap: 48px;
+
+  & img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 15px;
+  }
+
+  .crm-title {
+    @include project-title;
+    text-align: left;
+    margin-bottom: 0.5em;
+  }
+  .crm-content {
+    @include text;
+  }
+
+  .crm-item:first-child {
+    margin-bottom: 3em;
+  }
+  .crm-item:nth-child(2) {
+    margin-bottom: 3em;
+  }
 
 }
 

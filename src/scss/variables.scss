@@ -54,7 +54,7 @@ $path-satoshi: "../../font/Satoshi/Satoshi-Variable.ttf";
 }
 
 @mixin text {
-  font-size: 1.25em;
+  font-size: 1.25em; //24px
   line-height: 120%;
   color: $dark-grey;
 }
