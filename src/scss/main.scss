@@ -107,7 +107,7 @@ body {
 }
 
 .main-container {
-  background-color: $black;
+  background: $black;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -156,8 +156,8 @@ body {
       text-decoration: none;
       font-weight: 600;
       font-size: 20px;
-      padding: 24px 116px;
-      border-radius: 50px;
+      padding: 1.2em 5.8em; //20px 116px
+      border-radius: 2.5em;
       background-color: $blue;
       color: $white;
       transition: 0.3s;
@@ -202,15 +202,10 @@ body {
     grid-column-gap: 12px;
     grid-row-gap: 12px;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
 
     .skills-item {
-      width: 80px;
-      aspect-ratio: 1;
-      display: flex;
-      justify-content: center;
-      background-color: $item-blue;
-      border-radius: 7px;
+      @include item
     }
 
     .skills-item:last-child {
@@ -320,6 +315,7 @@ body {
   align-items: center;
   flex-direction: column;
 
+
   .h-title {
     @include title;
     margin-top: 1.2em; //96 % 72 = 1,333333333333333
@@ -340,13 +336,15 @@ body {
 
   .h-img {
     width: 900px;
+
   }
+
 }
 
 .project-container {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, minmax(400px,1fr));
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
   grid-template-rows: repeat(4, 100vh);
   grid-auto-flow: column;
   background-color: $black;
@@ -354,6 +352,7 @@ body {
   & img {
     margin: auto;
   }
+
   .mockup {
     width: 100%;
   }
@@ -384,10 +383,11 @@ body {
   .text-list {
     display: flex;
     flex-direction: column;
+
     .i-text {
       @include text;
       text-align: center;
-      margin-bottom: 1.5em;
+      margin-bottom: 1em;
     }
   }
 
@@ -401,6 +401,7 @@ body {
     .p-sub {
       grid-area: 1 / 1 / 2 / 5;
     }
+
     .p-subtitle {
       text-align: center;
       color: $white;
@@ -417,12 +418,8 @@ body {
   }
 
   .p-item div {
-    width: 80px;
-    aspect-ratio: 1;
-    display: flex;
-    justify-content: center;
+    @include item;
     background-color: $dark-blue;
-    border-radius: 7px;
     margin: auto;
   }
 
@@ -433,14 +430,15 @@ body {
 }
 
 .curriculum-container {
-  background-color: $black;
+  background: $black;
+  background: linear-gradient(90deg, rgba(20, 28, 64, 1) 0%, rgba(11, 13, 25, 1) 50%, rgba(11, 13, 25, 1) 100%);
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(2, minmax(25em, 31.25em)); //400px , 500px
   padding-top: 7.5em; //120px
   padding-bottom: 7.5em; //120px
-  column-gap: 48px;
+  column-gap: 7em;
 
   & img {
     width: 100%;
@@ -455,6 +453,7 @@ body {
     text-align: left;
     margin-bottom: 0.5em;
   }
+
   .crm-content {
     @include text;
   }
@@ -462,11 +461,70 @@ body {
   .crm-item:first-child {
     margin-bottom: 3em;
   }
+
   .crm-item:nth-child(2) {
     margin-bottom: 3em;
   }
 
 }
+
+.experience-container {
+  background: $black;
+  background: linear-gradient(90deg, rgba(11, 13, 25, 1) 0%, rgba(11, 13, 25, 1) 50%, rgba(20, 28, 64, 1) 100%);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(25em, 32.25em)); //400px , 500px
+  padding-top: 7.5em; //120px
+  padding-bottom: 7.5em; //120px
+  border-top: 1px solid rgba(255, 255, 255, .15);
+  column-gap: 5em;
+
+  .xp-title {
+    @include project-title;
+    margin-bottom: 20px;
+  }
+
+  .xp-list {
+    display: grid;
+    justify-content: space-between;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 20px;
+  }
+
+  .xp-item {
+    @include item;
+    width: 60px;
+  }
+
+  .xp-image {
+    width: 35px;
+    aspect-ratio: 1;
+  }
+
+  .xp-content {
+    @include text;
+  }
+
+  .xp-item-content {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-bottom: 2.5em;
+    }
+  }
+
+  .experience-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 15px;
+  }
+}
+
+
 
 
 .hidden {
