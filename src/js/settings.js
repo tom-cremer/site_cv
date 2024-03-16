@@ -1,4 +1,6 @@
 export const settings = {
-  idProgressBar: "Bar",
+  idProgressBar: 'Bar',
   jsEnabled: 'js-enabled',
+  disabled: 'no-js'
+
 }

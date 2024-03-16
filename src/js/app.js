@@ -12,7 +12,7 @@ const app = {
 
   enabled() {
     document.documentElement.classList.add(settings.jsEnabled);
-    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.remove(settings.disabled);
   },
 
 }
