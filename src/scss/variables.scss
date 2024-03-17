@@ -14,6 +14,7 @@ $dark-grey: #C2C2C2;
 $green: #05C874;
 $grey: #474A53;
 $item-blue: #171A24;
+$footer-black: #01030f;
 
 // fonts
 
@@ -74,4 +75,15 @@ $path-satoshi: "../../font/Satoshi/Satoshi-Variable.ttf";
     justify-content: center;
     background-color: $item-blue;
     border-radius: 7px;
+}
+
+
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
