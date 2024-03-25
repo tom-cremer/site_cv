@@ -36,7 +36,6 @@ body {
 
 
 .menu-container {
-
   .menu-list {
     display: flex;
 
@@ -185,8 +184,8 @@ body {
   background-color: $black;
   padding-top: 6em;
   padding-bottom: 6em;
-  justify-content: center;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(2, minmax(25em, 31.25em));
   column-gap: 7.5em;
   border-top: 1px $grey solid;
@@ -275,6 +274,7 @@ body {
       border: 1px $light-grey solid;
       border-radius: 5px;
       margin-right: 1%;
+      color: $white;
 
       &::placeholder {
         font-family: $satoshi;
@@ -393,24 +393,21 @@ body {
     }
   }
 
+  .p-subtitle {
+    text-align: center;
+    color: $white;
+    font-size: 1.125em; //18px
+    font-weight: bold;
+  }
+
   // Technologies list
   .p-list {
     display: grid;
     column-gap: 24px;
     grid-template-columns: repeat(4, minmax(100px, 140px));
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 1em;
 
-    .p-sub {
-      grid-area: 1 / 1 / 2 / 5;
-    }
-
-    .p-subtitle {
-      text-align: center;
-      color: $white;
-      font-size: 1.125em; //18px
-      font-weight: bold;
-      margin-bottom: 18px;
-    }
 
     .p-item-text {
       @include p-item-text;
@@ -580,6 +577,7 @@ body {
     @include text;
     text-align: center;
   }
+
   .m-image {
     width: 37%;
   }
@@ -718,6 +716,169 @@ footer {
   }
 
 }
+
+
+// affichage burger menu et vertical
+.burger-button {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .menu-container {
+    display: none;
+  }
+
+  .burger-button {
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    width: 20px;
+    aspect-ratio: 1;
+    padding: 15px;
+  }
+
+  .burger-line {
+    display: block;
+    width: 100%;
+    min-height: 2px;
+    background-color: $white;
+    border-radius: 7px;
+  }
+
+  .menu-checkbox:checked + .burger-button {
+    background-color: rgba(255, 255, 255, .15);
+  }
+  .menu-checkbox:checked ~ .menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+    width: 100%;
+    min-height: 70px;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100px);
+  }
+  .menu-checkbox:checked ~ .menu-container .menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & div {
+      margin-bottom: 80px;
+    }
+
+    .article-content {
+      text-align: center;
+    }
+  }
+
+  .headline-container {
+    .h-title {
+      @include title-990;
+    }
+    .h-subtitle{ @include text-990;}
+  }
+
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    .contact-title{
+      @include project-title-990;
+    }
+
+    .contact-image {
+      margin-bottom: 30px;
+    }
+
+    .contact-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .c-input {
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .c-submit {
+        width: 95%;
+      }
+    }
+  }
+
+  .p-1 {
+    .p-title {
+      @include project-title-990;
+    }
+
+    .p-list {
+      display: grid;
+      gap: 3em;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      margin-top: 1em;
+    }
+  }
+
+  .curriculum-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 48px;
+
+    & img {
+      width: 50%;
+      min-height: auto;
+      margin: auto;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 15px;
+    }
+
+    .crm-title {
+      @include project-title-990;
+      margin-bottom: 48px;
+    }
+
+    .crm-content {
+      @include text-990;
+    }
+  }
+
+}
+
+@media screen and (min-width: 770px) {
+
+
+}
+
+@media screen and (min-width: 480px) {
+
+
+}
+
 
 
 
