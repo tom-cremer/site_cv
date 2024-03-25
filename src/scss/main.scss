@@ -229,7 +229,6 @@ body {
 
 .article-content {
   @include text;
-
 }
 
 .contact-container {
@@ -793,7 +792,10 @@ footer {
     .h-title {
       @include title-990;
     }
-    .h-subtitle{ @include text-990;}
+
+    .h-subtitle {
+      @include text-990;
+    }
   }
 
   .contact-container {
@@ -803,7 +805,7 @@ footer {
     flex-direction: column;
     text-align: center;
 
-    .contact-title{
+    .contact-title {
       @include project-title-990;
     }
 
@@ -841,7 +843,14 @@ footer {
       grid-template-rows: repeat(2, 1fr);
       margin-top: 1em;
     }
+
+    .text-list {
+      .i-text {
+        @include text-990;
+      }
+    }
   }
+
 
   .curriculum-container {
     display: flex;
@@ -867,9 +876,56 @@ footer {
     }
   }
 
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    .xp-title {
+      @include project-title-990;
+      margin-bottom: 20px;
+    }
+    .xp-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+      align-items: center;
+
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .xp-item {
+      @include item;
+    }
+
+    .xp-content {
+      @include text-990;
+    }
+    .experience-image {
+      width: 50%;
+    }
+  }
+
+  .why-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 48px;
+    text-align: center;
+
+    & img {
+      width: 30%;
+    }
+
+    .why-title {
+      @include project-title-990;
+    }
+    .why-content {
+      @include text-990;
+    }
+  }
 }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 767px) {
 
 
 }
